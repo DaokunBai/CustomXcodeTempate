@@ -2,49 +2,51 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AllowedTypes</key>
-	<array>
-		<string>public.objective-c-source</string>
-		<string>public.objective-c-plus-plus-source</string>
-		<string>public.swift-source</string>
-	</array>
-	<key>DefaultCompletionName</key>
-	<string>MyClass</string>
-	<key>Description</key>
-	<string>Mine Custom TemplateInfo</string>
 	<key>Kind</key>
 	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
+	<key>Description</key>
+	<string>A Cocoa class.</string>
+	<key>Summary</key>
+	<string>A Cocoa class</string>
+	<key>SortOrder</key>
+	<string>100</string>
+	<key>DefaultCompletionName</key>
+	<string>MyClass</string>
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.ios</string>
+	</array>
 	<key>Options</key>
 	<array>
 		<dict>
-			<key>Description</key>
-			<string>The name of the file to create</string>
 			<key>Identifier</key>
 			<string>productName</string>
+			<key>Required</key>
+			<true/>
 			<key>Name</key>
 			<string>Class:</string>
-			<key>NotPersisted</key>
-			<true/>
-			<key>Required</key>
-			<true/>
+			<key>Description</key>
+			<string>The name of the class to create</string>
 			<key>Type</key>
 			<string>text</string>
+			<key>NotPersisted</key>
+			<true/>
 		</dict>
 		<dict>
-			<key>Default</key>
-			<string>NSObject</string>
-			<key>Description</key>
-			<string>What class to subclass in the new file</string>
-			<key>FallbackHeader</key>
-			<string>#import &lt;UIKit/UIKit.h&gt;</string>
 			<key>Identifier</key>
 			<string>cocoaSubclass</string>
-			<key>Name</key>
-			<string>Subclass of:</string>
 			<key>Required</key>
 			<true/>
+			<key>Name</key>
+			<string>Subclass of:</string>
+			<key>Description</key>
+			<string>What class to subclass in the new file</string>
 			<key>Type</key>
 			<string>class</string>
+			<key>Default</key>
+			<string>NSObject</string>
+			<key>FallbackHeader</key>
+			<string>#import &lt;UIKit/UIKit.h&gt;</string>
 			<key>Values</key>
 			<array>
 				<string>CustomVC</string>
@@ -59,13 +61,18 @@
 			<key>Identifier</key>
 			<string>XIB</string>
 			<key>Name</key>
-			<string>Also create XIB file</string>
+			<string>Also create XIB file for user interface</string>
 			<key>Description</key>
 			<string>Whether to create a XIB file with the same name</string>
 			<key>Type</key>
 			<string>checkbox</string>
 			<key>RequiredOptions</key>
-			<dict/>
+			<dict>
+				<key>cocoaSubclass</key>
+				<array>
+					<string>CustomVC</string>
+				</array>
+			</dict>
 			<key>Default</key>
 			<string>false</string>
 			<key>NotPersisted</key>
@@ -110,9 +117,5 @@
 			</dict>
 		</dict>
 	</array>
-	<key>SortOrder</key>
-	<string>100</string>
-	<key>Summary</key>
-	<string>Mine Custom TemplateInfo</string>
 </dict>
 </plist>
