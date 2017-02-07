@@ -14,7 +14,7 @@
 	<string>MyClass</string>
 	<key>Platforms</key>
 	<array>
-		<string>com.apple.platform.ios</string>
+		<string>com.apple.platform.iphoneos</string>
 	</array>
 	<key>Options</key>
 	<array>
@@ -38,7 +38,7 @@
 			<key>Required</key>
 			<true/>
 			<key>Name</key>
-			<string>Subclass of:</string>
+			<string>模板名:</string>
 			<key>Description</key>
 			<string>What class to subclass in the new file</string>
 			<key>Type</key>
@@ -66,13 +66,6 @@
 			<string>Whether to create a XIB file with the same name</string>
 			<key>Type</key>
 			<string>checkbox</string>
-			<key>RequiredOptions</key>
-			<dict>
-				<key>cocoaSubclass</key>
-				<array>
-					<string>CustomVC</string>
-				</array>
-			</dict>
 			<key>Default</key>
 			<string>false</string>
 			<key>NotPersisted</key>
